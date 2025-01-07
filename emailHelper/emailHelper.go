@@ -1,8 +1,8 @@
-package emailHelper
+package MailFlow
 
 import (
 	"context"
-	"github.com/LucaSchmitz2003/FlowWatch/loggingHelper"
+	"github.com/LucaSchmitz2003/FlowWatch"
 	"github.com/joho/godotenv"
 	"github.com/pkg/errors"
 	"go.opentelemetry.io/otel"
@@ -12,7 +12,7 @@ import (
 
 var (
 	tracer = otel.Tracer("MailHelperTracer")
-	logger = loggingHelper.GetLogHelper()
+	logger = FlowWatch.GetLogHelper()
 
 	emailSenderInstance *EmailSender
 	once                sync.Once

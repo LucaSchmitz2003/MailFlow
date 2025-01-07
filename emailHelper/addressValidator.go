@@ -1,4 +1,4 @@
-package emailHelper
+package MailFlow
 
 import (
 	"context"
